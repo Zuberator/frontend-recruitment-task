@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"main.css","sourcesContent":[]}
+{"version":3,"sources":["main.scss","main.css"],"names":[],"mappings":"AAAA,KACI,YCCJ","file":"main.css","sourcesContent":["body {\n    display: flex;\n}","body {\n  display: flex;\n}"]}
