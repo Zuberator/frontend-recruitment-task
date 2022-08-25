@@ -1,3 +1,123 @@
 body {
+    margin: 0;
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Desktop - Section */
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 95px;
+    width: 1440px;
+    background: #FFFFFF;
+    margin-top: 96px;
+}
+
+/* img-hero */
+
+.img {
+    width: 505px;
+    height: 330px;
+    // background: url('../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_480.jpg');
+}
+
+/* content */
+
+.section-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 380px;
+    gap: 28px;
+}
+
+/* title */
+
+.title {
+    margin: 0;
+
+    /* T1 */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 120%;
+    /* or 50px */
+
+    /* Dark #1 */
+    color: #121212;
+}
+
+/* copy */
+
+.copy {
+    margin: 0;
+
+    /* Body Copy */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+
+    /* Dark #1 */
+    color: #121212;
+}
+
+/* button */
+
+.button {
+    padding: 16px 40px;
+    width: 128px;
+    height: 48px;
+    cursor: pointer;
+
+    /* Primary #1 */
+    background: #E4C1AE;
+    border-radius: 32px;
+    border-style: none;
+
+    /* Button Text */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: #FFFFFF;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#alert {
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 920px;
+    height: 210px;
+    background: #fff;
+    border: 1px solid black;
+    padding: 56px 95px;
+}
+
+.alert-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.x-icon {
+    position: absolute;
+    top: 40px;
+    right: 40px;
 }
