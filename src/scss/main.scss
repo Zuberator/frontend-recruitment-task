@@ -3,16 +3,19 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    min-height: 100vh;
-    background-color: red;
+    height: 100%;
 }
 
 #overlay {
-    position: absolute;
-    width: 100vw;
-    min-height: 100vh;
-    background: #121212;
-    opacity: 0.5;
+    display: none;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
 }
 
 /* Desktop - Section */
@@ -25,7 +28,7 @@ body {
     gap: 95px;
     width: 1440px;
     background: #FFFFFF;
-    margin-top: 96px;
+    margin: 96px 20px 96px 20px;
 }
 
 /* content */
@@ -36,6 +39,14 @@ body {
     flex-direction: column;
     max-width: 380px;
     gap: 28px;
+}
+
+/* image */
+
+.img {
+    width: 100%;
+    max-width: 505px;
+    height: auto;
 }
 
 /* title */
@@ -49,7 +60,6 @@ body {
     font-weight: 700;
     font-size: 42px;
     line-height: 120%;
-    /* or 50px */
 
     /* Dark #1 */
     color: #121212;
@@ -66,7 +76,6 @@ body {
     font-weight: 300;
     font-size: 16px;
     line-height: 150%;
-    /* or 24px */
 
     /* Dark #1 */
     color: #121212;
@@ -100,16 +109,18 @@ body {
 }
 
 #alert {
+    display: none;
+    align-items: center;
     box-sizing: border-box;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 920px;
+    width: 90%;
+    max-width: 920px;
     height: 210px;
     background: #fff;
-    border: 1px solid black;
-    padding: 56px 95px;
+    padding-left: 6%;
 }
 
 .alert-content {
@@ -119,13 +130,17 @@ body {
     gap: 24px;
 }
 
+#counter {
+    font-weight: 600;
+}
+
 .x-icon {
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 40px;
-    right: 40px;
+    top: 2.5vw;
+    right: 2.5vw;
     width: 24px;
     height: 24px;
     cursor: pointer;
