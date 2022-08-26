@@ -11,14 +11,13 @@ let buttonClickCounter = localStorage.getItem("counter");
 function checkButton(times) {
     counter.textContent = times + " times";
     localStorage.setItem("counter", times);
-    if (times > 5) return resetButton.style.display = "block"
-    return resetButton.style.display = "none";
+    if (times > 5) return show(resetButton);
+    return hide(resetButton);
 };
 
 // ALERT BUTTON CLICK LOGIC - COUNTER
 alertButton.addEventListener('click', () => {
-    alertWindow.style.display = "flex";
-    overlay.style.display = "block";
+    show(overlay);
     buttonClickCounter ++;
     checkButton(buttonClickCounter);
 });
@@ -31,16 +30,28 @@ resetButton.addEventListener('click', () => {
 
 // CLOSE ALERT MODAL ONCLICK X-ICON
 xIcon.addEventListener('click', () => {
-    alertWindow.style.display = "none";
-    overlay.style.display = "none";
+    hide(overlay);
 });
 
 // CLOSE ALERT MODAL ONCLICK OUTSIDE
 document.addEventListener('mouseup', (element) => {
-    if (alertWindow.style.display = "flex") {
+    if (!overlay.classList.contains("hide")) {
         if (!alertWindow.contains(element.target)) {
-            alertWindow.style.display = 'none';
-            overlay.style.display = "none";
+            hide(overlay);
         }
     }
 });
+
+function hide(target) {
+    target.classList.remove("show");
+        setTimeout(() => {
+            target.classList.add("hide");
+        }, 300);
+}
+
+function show(target) {
+    target.classList.remove("hide");
+        setTimeout(() => {
+            target.classList.add("show");
+        }, 1);
+}

@@ -17,12 +17,12 @@
 <body>
 
     <!-- OVERLAY AND ALERT MODAL -->
-    <div id="overlay">
+    <div id="overlay" class="hide">
         <div id="alert">
             <div class="alert-content">
-                <h1 class="title">Alert!</h1>
+                <h2 class="title">Alert!</h2>
                 <p class="copy">You have clicked <span id="counter">X times</span> to related button.</p>
-                <button id="reset-button" class="button" style="display: none;">Reset</button>
+                <button id="reset-button" class="button hide" aria-label='Alert close button'>Reset</button>
             </div>
             <div id="x-icon" class="x-icon"></div>
         </div>
@@ -30,13 +30,13 @@
 
     <!-- MAIN SECTION -->
     <div class="section">
-        <img src="images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_784.jpg" class="img" width="505" height="330" alt="beach, sun and sea"></img>
+        <img src="images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_784.jpg" class="img" width="505" height="330" alt="beach, sun and sea">
         <div class="section-content">
-            <h1 class="title">Lorem Ipsum</h1>
+            <h2 class="title">Lorem Ipsum</h2>
             <p class="copy">Infinitely scalable, feature-rich and cloud-native data management 
                 and protection for modern and legacy infrastructures and SaaS platforms, 
                 managed via a single app with no hardware required.</p>
-            <button id="alert-button" class="button">Button</button>
+            <button id="alert-button" class="button" aria-label='Show alert modal'>Button</button>
         </div>
     </div>
 
